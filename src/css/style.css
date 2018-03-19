@@ -1,0 +1,50 @@
+body {
+  background-color: #f0f0f0; }
+
+.navbar .nav-link {
+  font-size: 14px;
+  text-transform: uppercase;
+  padding-left: 1em !important;
+  padding-right: 1em !important; }
+
+.navbar .nav-item.active {
+  border-left: #ffc32d 3px solid; }
+
+.carousel-item {
+  height: 500px; }
+
+.carousel-image-1 {
+  background: url("../img/stone-arch.jpg") no-repeat center;
+  background-size: cover; }
+
+.carousel-image-2 {
+  background: url("../img/light-dark.jpg") no-repeat center;
+  background-size: cover; }
+
+.carousel-image-3 {
+  background: url("../img/usbank.jpg") no-repeat center;
+  background-size: cover; }
+
+.rh {
+  border: 1px solid black; }
+
+#cards img {
+  height: 250px;
+  width: 250px;
+  border-radius: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -40px; }
+
+#cards .card:hover {
+  background-color: #f8ffaa; }
+
+#video {
+  min-height: 200px;
+  background: url("../img/paper.jpeg");
+  background-repeat: no-repeat;
+  text-align: center;
+  color: #f0f0f0;
+  margin-top: 20px; }
+  #video a.fa {
+    font-size: 50px; }
