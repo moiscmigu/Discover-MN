@@ -3,11 +3,11 @@ $dark-overlay: rgba(0,0,0,0.7);
 $body-background: rgb(240, 240, 240);
 $active-color:rgb(255, 195, 45);
 
-body {
+// body {
     
-    background-color:$body-background;
+//     background-color:$body-background;
 
-}
+// }
 
 .navbar {
     .nav-link {
@@ -35,7 +35,7 @@ body {
     background-size:cover;
 }
 .carousel-image-3 {
-    background: url("../img/usbank.jpg") no-repeat center;
+    background: url("../img/golden-horse.jpg") no-repeat center;
     background-size:cover;
 }
 
@@ -63,7 +63,7 @@ body {
 
 #video {
     min-height:200px;
-    background: url("../img/paper.jpeg");
+    background: url("../img/dark-paper.jpg");
     background-repeat: no-repeat;
     text-align:center;
     color:$body-background;
@@ -73,4 +73,13 @@ body {
         font-size: 50px;
     }
 
+}
+
+#fortune-header {
+    min-height:250px;
+    background: url("../img/dark-money.jpg");
+    background-repeat: no-repeat;
+    text-align:center;
+    color:$body-background;
+    margin-top:20px;
 }
