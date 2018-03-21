@@ -1,3 +1,6 @@
+body {
+  background-color: #f0f0f0; }
+
 .navbar .nav-link {
   font-size: 14px;
   text-transform: uppercase;
