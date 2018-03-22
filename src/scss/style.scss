@@ -105,6 +105,19 @@ body {
     
 }
 
+#events-header {
+    min-height:250px;
+    background: url("../img/events.jpg") center;
+    background-repeat: no-repeat;
+    background-size:cover;
+
+    text-align:center;
+    color:$body-background;
+    margin-top:20px;
+
+    
+}
+
 #visit {
     p {
         font-size: 15px;

@@ -1,7 +1,8 @@
 let myApp = angular.module('myApp', ["ngRoute"]).
 controller("homeController", homeController).
 controller("fortuneController", fortuneController).
-controller("visitController", visitController);
+controller("visitController", visitController).
+controller("eventsController", eventsController);
 
 
 
@@ -15,5 +16,8 @@ myApp.config(function($routeProvider) {
     }).when("/visit", {
         templateUrl:"partials/visit.html",
         controller:"visitController as fc"
+    }).when("/events", {
+        templateUrl:"partials/events.html",
+        controller:"eventsController as ec"
     });
 });
