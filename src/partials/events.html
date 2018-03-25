@@ -1,39 +1,80 @@
 <nav class="navbar navbar-expand-md navbar-light bg-light mb-0" >
-        <div class="container">
-                <a href="index.html " class="navbar-brand">
-                    <h3 class="d-inline align-middle">Discover MN</h3>
-                    <img src="img/mn-icon.png" width="50" height="50" alt="">
-                </a>
-                <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse " id="navbarNav">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item px-2">
-                            <a href="#" class="nav-link"><i class="fa fa-home"></i>HOME</a>
-                        </li>
-                        <li class="nav-item px-2">
-                            <a href="#" class="nav-link"><i class="fas fa-dollar-sign"></i> FORTUNE 500</a>
-                        </li>
-                        <li class="nav-item px-2">
-                            <a href="#!/visit" class="nav-link"><i class="fa fa-map-marker"></i> PLACES TO GO</a>
-                        </li>
-                        <li class="nav-item px-2 active">
-                            <a href="#!/events" class="nav-link"><i class="fa fa-calendar"></i> EVENTS</a>
-                        </li>
-                    </ul>
-                </div>
-        </div>
-    </nav>
+    <div class="container">
+            <a href="index.html " class="navbar-brand">
+                <h3 class="d-inline align-middle">Discover MN</h3>
+                <img src="img/mn-icon.png" width="50" height="50" alt="">
+            </a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse " id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item px-2">
+                        <a href="#" class="nav-link"><i class="fa fa-home"></i>HOME</a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <a href="#" class="nav-link"><i class="fas fa-dollar-sign"></i> FORTUNE 500</a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <a href="#!/visit" class="nav-link"><i class="fa fa-map-marker"></i> PLACES TO GO</a>
+                    </li>
+                    <li class="nav-item px-2 active">
+                        <a href="#!/events" class="nav-link"><i class="fa fa-calendar"></i> EVENTS</a>
+                    </li>
+                </ul>
+            </div>
+    </div>
+</nav>
 
-    <!-- EVENTS HEADER -->
-    
-    <section id="events-header" class="p-5 mt-0" >
-        <div class="container">
-            <div class="row text-center">
-                <div class="col">
-                    <h1 class=""><strong>Upcoming Events</strong></h1>
+<!-- EVENTS HEADER -->
+
+<section id="events-header" class="p-5 mt-0" >
+    <div class="container">
+        <div class="row text-center">
+            <div class="col">
+                <h1 class=""><strong>Upcoming Events</strong></h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- EVENTS SECTION -->
+<section id="events" ng-if="ec.data">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 mt-5 card" ng-repeat="e in ec.data"> 
+                <div class="row">
+                    <div class="col-md-3 {{ec.bg()}} text-center p-0">
+                        <h1 class="text-white display-2"><strong>{{e.date}}</strong></h1>
+                        
+                    </div>
+                    <div class="col-md-9 ">
+                        <h1 class="text-center">{{e.title}}</h1>
+                        <p class="lead">
+                            {{e.description}}
+                        </p>
+
+                        <hr>
+                        <p class="text-center d-block">{{e.address}}</p>
+                        <p class="d-inline"><strong>{{e.category}}</strong></p>
+                        
+                        <p class="d-inline float-right"><strong>{{e.fromNow}}</strong></p>
+                        
+
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    
+<!-- LOADER -->
+
+<section id="loader" ng-if="ec.loader">
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <img src="../img/loader.gif" alt="" class="img-fluid" ng-if="ec.loader">
+            </div>
+        </div>
+    </div>
+</section>
+

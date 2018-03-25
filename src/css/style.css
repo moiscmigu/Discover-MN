@@ -1,5 +1,4 @@
 body {
-  background-color: #f0f0f0;
   overflow-x: hidden; }
 
 .navbar .nav-link {
@@ -190,3 +189,9 @@ body {
 
 #visit7:hover .visit7 {
   background-color: rgba(0, 0, 0, 0.7); }
+
+#loader img {
+  height: 300px; }
+
+#events .card {
+  border: 1px dashed black; }
