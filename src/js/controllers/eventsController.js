@@ -1,9 +1,11 @@
 function eventsController(eventsService) {
-    console.log("In the events Controller");
+    
     let vm = this;
+
     vm.loader = true;
     vm.data = false;
-    var color = "bg-primary";
+    
+    vm.color = "bg-info";
 
     eventsService.searchEvents().then(res => {
         vm.loader = false;
@@ -15,33 +17,43 @@ function eventsController(eventsService) {
         
            if (vm.address[i] == null) {
                 vm.results[i].address = "N/A";
-                console.log("Not A" );
-
            } else {
                vm.results[i].address = vm.address[i][0].formattedAddress;
            }
-       }
+       }//end of for loop
 
        vm.data = vm.results;
-        console.log("The Results", vm.data)
+
+       return vm.data;
+        
 
     });//end of eventsService
 
-    vm.bg = () => {
-        if(color == "bg-primary") {
-            return "bg-warning";
+    vm.colorSelector = () => {
+
+        if (vm.color == "bg-info") {
+            vm.color = "bg-warning";
+            return "bg-warning"
+        } 
+        else if (vm.color == "bg-warning") {
+            vm.color = "bg-success";
+            return "bg-success";
         }
-        else if(color == "bg-warning") {
-            return "bg-danger";
-        }
-        else if (color == "bg-danger") {
-            return "bg-success"
-        } else {
+        else if (vm.color == "bg-success") {
+            vm.color = "bg-primary";
             return "bg-primary";
         }
-    };
-
-
+        else if (vm.color == "bg-primary") {
+            vm.color = "bg-danger";
+            return "bg-danger";
+        }
+        else {
+            vm.color = "bg-info";
+            return "bg-info";
+        }
+        
+        
+    };//end of colorSelector
 
 
 }//end of events controller

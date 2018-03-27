@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-md navbar-light bg-light mb-0" >
     <div class="container">
             <a href="index.html " class="navbar-brand">
-                <h3 class="d-inline align-middle">Discover MN</h3>
+                <h3 class="d-inline align-middle"> Discover MN</h3>
                 <img src="img/mn-icon.png" width="50" height="50" alt="">
             </a>
             <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
@@ -21,7 +21,7 @@
                     </li>
                 </ul>
             </div>
-    </div>
+    </div> 
 </nav>
 
 <!-- EVENTS HEADER -->
@@ -40,9 +40,9 @@
 <section id="events" ng-if="ec.data">
     <div class="container">
         <div class="row">
-            <div class="col-md-12 mt-5 card" ng-repeat="e in ec.data"> 
+            <div class="col-md-12 mt-5 card" ng-repeat="e in ec.data" > 
                 <div class="row">
-                    <div class="col-md-3 {{ec.bg()}} text-center p-0">
+                    <div class="col-md-3 {{ec.colorSelector()}} text-center p-0" >
                         <h1 class="text-white display-2"><strong>{{e.date}}</strong></h1>
                         
                     </div>
